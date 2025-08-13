@@ -23,7 +23,12 @@ function App() {
       <div className="mb-8">
         <AccordionPage />
       </div>
-      <div>
+      <div className="flex">
+        <DropDown
+          options={options}
+          selection={selection}
+          onSelect={handleSelection}
+        />
         <DropDown
           options={options}
           selection={selection}
