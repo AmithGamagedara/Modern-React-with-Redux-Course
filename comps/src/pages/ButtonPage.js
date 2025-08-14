@@ -9,7 +9,6 @@ function ButtonPage() {
 
   return (
     <div>
-      App
       <div className="m-3">
         <Button success rounded outline onClick={handleClick} className="mb-5">
           <GoBell />
