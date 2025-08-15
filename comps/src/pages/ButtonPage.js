@@ -3,9 +3,7 @@ import Button from "../components/Button";
 import { GoBell, GoCloudDownload, GoGift, GoFlame } from "react-icons/go";
 
 function ButtonPage() {
-  const handleClick = () => {
-    console.log("click");
-  };
+  const handleClick = () => {};
 
   return (
     <div>
