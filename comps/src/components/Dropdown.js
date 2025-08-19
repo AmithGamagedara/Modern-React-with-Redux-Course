@@ -62,7 +62,7 @@ function DropDown({ options, selection, onSelect }) {
         {isOpen ? <GoChevronUp /> : <GoChevronDown />}
       </Panel>
       {isOpen && (
-        <Panel className="absolute top-full mt-0.5">{renderedOptions}</Panel>
+        <Panel className="absolute top-full mt-0.5 w-full">{renderedOptions}</Panel>
       )}
     </div>
   );
