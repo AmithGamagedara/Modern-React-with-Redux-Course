@@ -14,6 +14,6 @@ function App() {
       <CarValue/>
     </div>
   )
-}
+  }
 
 export default App;
