@@ -1,11 +1,11 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit";
-import { act } from "react";
+
 
 const carsSlice = createSlice({
   name: "cars",
   initialState: {
     searchTerm: "",
-    cars: [],
+    data: [],
   },
   reducers: {
     changeSearchTerm(state, action) {
@@ -14,20 +14,20 @@ const carsSlice = createSlice({
     addCar(state, action) {
       //Assumption:
       //action.payload === { name: "ab", cost: 140 }
-      state.cars.push({
+      state.data.push({
         name: action.payload.name,
         cost: action.payload.cost,
-        id: nanoid,
+        id: nanoid(),
         //Math.random() = we use nanoid to randomly add id
       });
     },
     removeCar(state, action) {
       //Assumption
       //action.payload === {id} id of the car want to remove
-      const updated = state.cars.filter((car) => {
+      const updated = state.data.filter((car) => {
         return car.id != action.payload;
       });
-      state.cars = updated;
+      state.data = updated;
     },
   },
 });
